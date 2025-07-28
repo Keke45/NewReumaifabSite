@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>title</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Reumaifab</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
-    <nav>
-        <div class="logo">
-            <img src="Assets\logo.jpg" alt="Logo" class="logo" />
-        </div>
-        <div>
-            <h1 style="text-align:center">REUMAIFAB</h1>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
 
-        <input type="checkbox" id="checkboxInput">
-        <label for="checkboxInput" class="toggleSwitch"></label>
+  <!-- ✅ Navigation Bar -->
+  <nav class="navbar">
+    <div>
+      <img src="Assets/logo.jpg" alt="Reumaifab Logo"   class="logo" style="height:40px; width:auto; border-radius: 50px; object-fit:contain;">
+    </div>
+    <div>
+      <h1 class="company- name">REUMAIFAB TECH</h1>
+    </div>
+    <input type="checkbox" id="toggle" class="menu-toggle">
+    <label for="toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-    </nav>
-
-
-<body>
+  <!-- ✅ About Section -->
   <section class="about-hero">
     <div class="overlay" data-aos="fade-up" data-aos-duration="1200">
       <div class="about-card">
@@ -52,80 +51,83 @@
     </div>
   </section>
 
+  <!-- ✅ Services Section -->
+  <section class="services-section">
+    <div class="services-container">
+      <h2 data-aos="fade-up" data-aos-duration="1000">Our Services</h2>
+      <p class="services-intro" data-aos="fade-up" data-aos-delay="150">
+        Getting or finding a service that suits your needs is hard and not fun at all, but with our easy-to-understand service outline, you'll find what you need in no time.
+      </p>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
-</html>
+      <div class="services-grid">
 
-<section class="services-section">
-  <div class="services-container">
-    <h2 data-aos="fade-up" data-aos-duration="1000">Our Services</h2>
-    <p class="services-intro" data-aos="fade-up" data-aos-delay="150">
-      Getting or finding a service that suits your needs is hard and not fun at all, but with our easy-to-understand service outline, you'll find what you need in no time.
-    </p>
+        <!-- Example Service Card with Button -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Database Development & Management</h3>
+          <p>Develop and maintain professional, effective databases for small to enterprise-level businesses — with world-class results.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-    <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+          <h3>IT Management</h3>
+          <p>Our IT Management Services allow clients to focus on their core business while we handle the technical backbone.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-        <h3>Database Development & Management</h3>
-        <p>Develop and maintain professional, effective databases for small to enterprise-level businesses — with world-class results.</p>
-      </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Online Data Backup & Storage</h3>
+          <p>Secure, affordable, and reliable cloud solutions — your data is protected and always available when you need it.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="250">
-        <h3>IT Management</h3>
-        <p>Our IT Management Services allow clients to focus on their core business while we handle the technical backbone.</p>
-      </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+          <h3>Software, App & Web Development</h3>
+          <p>Our trusted design and development team delivers the best custom-built solutions for your business needs.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-        <h3>Online Data Backup & Storage</h3>
-        <p>Secure, affordable, and reliable cloud solutions — your data is protected and always available when you need it.</p>
-      </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <h3>Digital Marketing</h3>
+          <p>We get results. Whether you're looking to grow traffic, leads, or sales, our digital marketing team delivers guaranteed outcomes.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="350">
-        <h3>Software, App & Web Development</h3>
-        <p>Our trusted design and development team delivers the best custom-built solutions for your business needs.</p>
-      </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="450">
+          <h3>Digital Strategy</h3>
+          <p>We help you craft a winning digital strategy that maximizes performance and optimizes your efforts across platforms.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-        <h3>Digital Marketing</h3>
-        <p>We get results. Whether you're looking to grow traffic, leads, or sales, our digital marketing team delivers guaranteed outcomes.</p>
-      </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <h3>IT Consultancy & Training</h3>
+          <p>Helping clients understand their tech needs and implement powerful IT solutions with hands-on guidance and training.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="450">
-        <h3>Digital Strategy</h3>
-        <p>We help you craft a winning digital strategy that maximizes performance and optimizes your efforts across platforms.</p>
-      </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="550">
+          <h3>SEO Experts</h3>
+          <p>Be visible everywhere. Our SEO specialists ensure your business ranks where your customers are searching.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-        <h3>IT Consultancy & Training</h3>
-        <p>Helping clients understand their tech needs and implement powerful IT solutions with hands-on guidance and training.</p>
-      </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+          <h3>Social Media Marketing & Management</h3>
+          <p>Custom social media strategies tailored to your business — build presence, engage audiences, and drive results.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="550">
-        <h3>SEO Experts</h3>
-        <p>Be visible everywhere. Our SEO specialists ensure your business ranks where your customers are searching.</p>
-      </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="650">
+          <h3>Online Payment Solutions</h3>
+          <p>Payment processing made simple. Reumaifab helps businesses integrate reliable online payment systems with ease.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-        <h3>Social Media Marketing & Management</h3>
-        <p>Custom social media strategies tailored to your business — build presence, engage audiences, and drive results.</p>
-      </div>
-
-      <div class="service-card" data-aos="fade-up" data-aos-delay="650">
-        <h3>Online Payment Solutions</h3>
-        <p>Payment processing made simple. Reumaifab helps businesses integrate reliable online payment systems with ease.</p>
-      </div>
-
-      <div class="service-card" data-aos="fade-up" data-aos-delay="700">
-        <h3>Bulk SMS Services</h3>
-        <p>Stay connected. Bulk SMS ensures strong, smooth communication between businesses and their audiences.</p>
-      </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+          <h3>Bulk SMS Services</h3>
+          <p>Stay connected. Bulk SMS ensures strong, smooth communication between businesses and their audiences.</p>
+          <button class="read-more-btn">Read More</button>
+        </div>
 
     </div>
   </div>
 </section>
-</body>
-</html>
