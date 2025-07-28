@@ -252,12 +252,13 @@ body {
   color: #1a73e8;
   margin-bottom: 12px;
 }
-
 .service-card p {
   font-size: 1rem;
   color: #333;
   line-height: 1.6;
 }
+<<<<<<< HEAD
+=======
 
 
 .read-more-btn {
@@ -274,3 +275,4 @@ body {
 .read-more-btn:hover {
   background-color: #0056b3;
 }
+>>>>>>> 2b4e62a6932359b03b6b51b7d1408b3f46369e3e
