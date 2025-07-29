@@ -1,55 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - Reumaifab</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About Us - Reumaifab</title>
+    <!-- External stylesheet provided by user -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- AOS (Animate On Scroll) library for animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for social media and contact icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS for the new direct contact buttons */
+        .direct-contact-options {
+            text-align: center;
+            margin-top: 3rem; /* Spacing above this section */
+            padding: 2rem;
+            background-color: #f9fafb; /* Light gray background */
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+        }
+
+        .direct-contact-options h2 {
+            font-size: 1.75rem; /* Large heading for direct contact */
+            font-weight: 600; /* Semi-bold */
+            color: #1f2937; /* Dark gray text */
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-buttons-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column on small screens */
+            gap: 1rem; /* Space between buttons */
+            justify-items: center; /* Center buttons horizontally */
+        }
+
+        /* Responsive grid for contact buttons */
+        @media (min-width: 640px) { /* Small screens and up (sm breakpoint) */
+            .contact-buttons-grid {
+                grid-template-columns: repeat(2, 1fr); /* Two columns */
+            }
+        }
+
+        @media (min-width: 1024px) { /* Large screens and up (lg breakpoint) */
+            .contact-buttons-grid {
+                grid-template-columns: repeat(4, 1fr); /* Four columns */
+            }
+        }
+
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1.5rem;
+            border-radius: 9999px; /* Fully rounded buttons */
+            font-weight: 500; /* Medium font weight */
+            transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+            text-decoration: none; /* Remove underline from links */
+            min-width: 180px; /* Ensure a consistent minimum width */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for buttons */
+        }
+
+        .contact-button i {
+            font-size: 1.5rem; /* Icon size */
+            margin-right: 0.75rem; /* Space between icon and text */
+        }
+
+        .contact-button span {
+            font-size: 1.125rem; /* Text size for button labels */
+        }
+
+        /* Specific button colors */
+        .email-button {
+            background-color: #ef4444; /* Red color */
+            color: white;
+        }
+        .email-button:hover {
+            background-color: #dc2626; /* Darker red on hover */
+            transform: translateY(-2px); /* Lift effect */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhanced shadow */
+        }
+
+        .call-button {
+            background-color: #22c55e; /* Green color */
+            color: white;
+        }
+        .call-button:hover {
+            background-color: #16a34a; /* Darker green on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .facebook-button {
+            background-color: #3b82f6; /* Blue color */
+            color: white;
+        }
+        .facebook-button:hover {
+            background-color: #2563eb; /* Darker blue on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-button {
+            background-color: #25d366; /* WhatsApp green */
+            color: white;
+        }
+        .whatsapp-button:hover {
+            background-color: #1da851; /* Darker WhatsApp green on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Ensure existing form elements are well-styled and responsive */
+        .contact-us form {
+            max-width: 600px; /* Limit form width for better readability */
+            margin: 0 auto; /* Center the form */
+            padding: 2rem;
+            background-color: #ffffff; /* White background for the form */
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-us label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #374151; /* Darker gray for labels */
+        }
+
+        .contact-us input[type="text"],
+        .contact-us input[type="email"],
+        .contact-us textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db; /* Light gray border */
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            box-sizing: border-box; /* Include padding in element's total width */
+        }
+
+        .contact-us input[type="text"]:focus,
+        .contact-us input[type="email"]:focus,
+        .contact-us textarea:focus {
+            outline: none;
+            border-color: #4f46e5; /* Indigo border on focus */
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2); /* Focus ring */
+        }
+
+        .contact-us button[type="submit"] {
+            display: block;
+            width: auto; /* Auto width based on content */
+            margin: 1.5rem auto 0; /* Center button below form */
+            padding: 1rem 2rem;
+            background-color: #4f46e5; /* Indigo background */
+            color: white;
+            border: none;
+            border-radius: 9999px; /* Fully rounded */
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-us button[type="submit"]:hover {
+            background-color: #4338ca; /* Darker indigo on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
 </head>
 <body>
 
-  <!-- ✅ Navigation Bar -->
-  <nav class="navbar">
-    <div>
-      <img src="Assets/logo.jpg" alt="Reumaifab Logo"   class="logo" style="height:40px; width:auto; border-radius: 50px; object-fit:contain;">
-    </div>
-    <div>
-      <h1 class="company- name">REUMAIFAB TECH</h1>
-    </div>
-    <input type="checkbox" id="toggle" class="menu-toggle">
-    <label for="toggle" class="hamburger">&#9776;</label>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- ✅ Navigation Bar -->
+    <nav class="navbar">
+        <div>
+            <img src="Assets/logo.jpg" alt="Reumaifab Logo" class="logo" style="height:40px; width:auto; border-radius: 50px; object-fit:contain;">
+        </div>
+        <div>
+            <h1 class="company-name">REUMAIFAB TECH</h1>
+        </div>
+        <input type="checkbox" id="toggle" class="menu-toggle">
+        <label for="toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-  <!-- ✅ About Section -->
-  <section class="about-hero">
-    <div class="overlay" data-aos="fade-up" data-aos-duration="1200">
-      <div class="about-card">
-        <h1 data-aos="zoom-in" data-aos-delay="100">About Us</h1>
-        <p class="intro" data-aos="fade-right" data-aos-delay="200">
-          <strong>REUMAIFAB TECH & Marketing Services Limited</strong> is a Zambian-based technology and marketing private company established in 2019. From the early stages of operation, we’ve gained vast experience through diverse projects across various sectors.
-        </p>
-        <p data-aos="fade-left" data-aos-delay="300">
-          We believe in quick delivery of the best results — every time. Our workflow is streamlined for maximum efficiency, ensuring we meet and exceed client expectations.
-        </p>
-        <p data-aos="fade-right" data-aos-delay="400">
-          Research is at the core of everything we do. We explore and test ideas thoroughly before developing them into real-world products and solutions. And when challenges arise, we rely on a strong network of experienced associates always ready to step in.
-        </p>
-        <p data-aos="fade-left" data-aos-delay="500">
-          As a growing conglomerate in response to rising demand for tech solutions, we’ve expanded into multiple sectors — technology, media, and digital marketing — through platforms like <strong>Reumaifab.com</strong>, <strong>Shop Africa</strong>, and <strong>Chrisma eMarketers</strong>.
-        </p>
-        <p class="tagline" data-aos="zoom-in-up" data-aos-delay="600">
-          Innovation. Speed. Excellence. That’s the Reumaifab way.
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- ✅ About Section -->
+    <section class="about-hero">
+        <div class="overlay" data-aos="fade-up" data-aos-duration="1200">
+            <div class="about-card">
+                <h1 data-aos="zoom-in" data-aos-delay="100">About Us</h1>
+                <p class="intro" data-aos="fade-right" data-aos-delay="200">
+                    <strong>REUMAIFAB TECH & Marketing Services Limited</strong> is a Zambian-based technology and marketing private company established in 2019. From the early stages of operation, we’ve gained vast experience through diverse projects across various sectors.
+                </p>
+                <p data-aos="fade-left" data-aos-delay="300">
+                    We believe in quick delivery of the best results — every time. Our workflow is streamlined for maximum efficiency, ensuring we meet and exceed client expectations.
+                </p>
+                <p data-aos="fade-right" data-aos-delay="400">
+                    Research is at the core of everything we do. We explore and test ideas thoroughly before developing them into real-world products and solutions. And when challenges arise, we rely on a strong network of experienced associates always ready to step in.
+                </p>
+                <p data-aos="fade-left" data-aos-delay="500">
+                    As a growing conglomerate in response to rising demand for tech solutions, we’ve expanded into multiple sectors — technology, media, and digital marketing — through platforms like <strong>Reumaifab.com</strong>, <strong>Shop Africa</strong>, and <strong>Chrisma eMarketers</strong>.
+                </p>
+                <p class="tagline" data-aos="zoom-in-up" data-aos-delay="600">
+                    Innovation. Speed. Excellence. That’s the Reumaifab way.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- ✅ Services Section -->
     <section class="services-section">
