@@ -23,7 +23,7 @@ body {
 
 
 .navbar {
-  /*background: linear-gradient(45deg, red, blue);*/
+  background: linear-gradient(45deg, red, blue);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -33,7 +33,6 @@ body {
   z-index: 999;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   animation: slideIn 1s ease-in-out;
-  width: 100%;
 }
 
 @keyframes slideIn {
@@ -68,27 +67,25 @@ body {
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li{
+    list-style: none;
 }
 
 .nav-links li a {
-  text-decoration: none;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  transition: 0.3s;
-  border: 2px solid transparent;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 10px;
+    border-radius: 99px;
+    transition: 150ms;
 }
 
 .nav-links li a:hover {
-  background: white;
-  color: black;
-  transform: rotate(-3deg) scale(1.1);
-  border-color: yellow;
-  box-shadow: 0 0 15px cyan;
+    background-color: #663c3c;
 }
 
 /* Hamburger Menu */
@@ -109,7 +106,7 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    /*background: linear-gradient(135deg, red, blue);*/
+    background: linear-gradient(135deg, red, blue);
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -132,8 +129,6 @@ body {
   .hamburger {
     display: block;
   }
-
-
 }
 
 @keyframes fadeIn {
