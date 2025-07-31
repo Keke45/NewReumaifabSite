@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - Reumaifab</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reumaifab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- AOS (Animate On Scroll) library for animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for social media and contact icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
 
-  <!-- ✅ Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo-container">
-      <img src="Assets/logo.jpg" alt="Logo" class="logo" />
-    </div>
-    <div class="nav-title">
-      <h1>REUMAIFAB</h1>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    
 
-    <input type="checkbox" id="checkboxInput" />
-    <label for="checkboxInput" class="toggleSwitch"></label>
-  </nav>
+    <!-- Hero Section -->
+    <section id="hero">
+      <!-- ✅ Navigation Bar -->
+      <nav class="navbar">
+        <div>
+            <img src="Assets/logo2.png" alt="Reumaifab Logo" class="logo" style="height:50px; width:auto; border-radius: 50px; object-fit:contain;">
+        </div>
+        <div>
+            <h1 class="company-name">REUMAIFAB TECH</h1>
+        </div>
+        <input type="checkbox" id="toggle" class="menu-toggle">
+        <label for="toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-box">
+        <h1 class="hero-heading">
+          enjoy a wide array of our unique services.
+        </h1>
+        <p class="hero-desc">
+          We have a wide array of services to offer you. Services that best suits your needs with an option to customize your service of choice when need be.
+        </p>
+
+        <div class="hero-btn">
+          <a href="#" class="hero-btn-1">Learn More</a>
+          <a href="#" class="hero-btn-2">Contacts Us</a>
+        </div>
+      </div>
+    </section>
 
     <!-- ✅ About Section -->
     <section class="about-section">
