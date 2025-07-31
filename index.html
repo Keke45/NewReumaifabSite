@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Reumaifab</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <!-- AOS (Animate On Scroll) library for animations -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <!-- Font Awesome for social media and contact icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
 
 </head>
 <body>
@@ -186,7 +186,7 @@
             </div>
         </div>
 
-
+        
         <h1>Send a Message</h1>
 
         <form action="#" method="post">
@@ -214,27 +214,36 @@
     AOS.init();
   </script>
 
-    <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-section">
-      <img src="Assets/logo2.png" alt="Reumaifab Logo" class="logo" style="height:50px; width:auto; border-radius: 50px; object-fit:contain;">
-    </div>
-    <div class="footer-section">
-      <h3>Reumaifab</h3>
-      <p>Innovating through tech & digital marketing.</p>
-    </div>
-    <div class="footer-section">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
-        <a href="#"><img src="x-icon.png" alt="Twitter/X" /></a>
-        <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2025 Reumaifab. All rights reserved.
-  </div>
+<footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+  <aside>
+     <img src="Assets/logo2.png" alt="Reumaifab Logo" class="logo" style="height:50px; width:auto; border-radius: 50px; object-fit:contain;">
+
+    <p>
+        <strong>Reumaifab Tech & Marketing Services Limited</strong><br />
+      <br />
+        We are a Zambian-based technology and marketing<br> private company established in 2019.
+    </p>
+    <p style="color: black;"><label>&#x1F4CD;</label> Plot No. 13, Nchenja Road, Off Great East road, Northmead Lusaka.</p>
+  </aside>
+  <nav>
+    <h6 class="footer-title">Services</h6>
+    <a class="link link-hover">Software & Web Development</a>
+    <a class="link link-hover">Database Development</a>
+    <a class="link link-hover">IT Management</a>
+    <a class="link link-hover">Digital Marketing</a>
+    <a class="link link-hover">SEO</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Company</h6>
+    <a class="link link-hover">About us</a>
+    <a class="link link-hover">Contact</a>
+    <a class="link link-hover">Services</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Legal</h6>
+    <a class="link link-hover">Terms of use</a>
+    <a class="link link-hover">Privacy policy</a>
+  </nav>
 </footer>
 </body>
 </html>
